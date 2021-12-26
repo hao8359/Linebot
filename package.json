@@ -1,0 +1,25 @@
+{
+  "name": "saolife",
+  "version": "1.0.0",
+  "description": "[![Maintainability](https://api.codeclimate.com/v1/badges/dc7fa47fcd809b99d087/maintainability)](https://codeclimate.com/github/NCKU-CCS/TOC-Project-2020/maintainability)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hao8359/saolife.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hao8359/saolife/issues"
+  },
+  "homepage": "https://github.com/hao8359/saolife#readme",
+  "dependencies": {
+    "package.json": "^2.0.1"
+  },
+  "engines":{
+    "node" : "12.22.8"
+  }
+}
