@@ -124,7 +124,7 @@ machine = TocMachine(
     auto_transitions=False,
     show_conditions=True, 
 )
-
+machine.get_graph().draw("fsm.png", prog="dot", format="png")
 app = Flask(__name__, static_url_path="")
 
 
@@ -199,10 +199,10 @@ def webhook_handler():
     return "OK"
 
 
-@app.route("/show-fsm", methods=["GET"])
+'''@app.route("/show-fsm", methods=["GET"])
 def show_fsm():
     machine.get_graph().draw("fsm.png", prog="dot", format="png")
-    return send_file("fsm.png", mimetype="image/png")
+    return send_file("fsm.png", mimetype="image/png")'''
 
 
 if __name__ == "__main__":
