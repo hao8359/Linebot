@@ -103,7 +103,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state4")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=RsEZmictANA")
+        send_text_message(reply_token, "https://youtu.be/F3JyzuDIV3I")
         self.go_back()
 
     def on_exit_state4(self):
