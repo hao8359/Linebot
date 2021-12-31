@@ -67,6 +67,9 @@ class TocMachine(GraphMachine):
     def is_going_to_state16(self, event):
         text = event.message.text
         return text.lower() == "add"
+    def is_going_to_state17(self, event):
+        text = event.message.text
+        return text.lower() == "bye bye"
 
     def on_enter_state1(self, event):
         print("I'm entering state1")
@@ -113,7 +116,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state5")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=aAkMkVFwAoo")
+        send_text_message(reply_token, "https://youtu.be/gr2DjP6y1-k")
         self.go_back()
 
     def on_exit_state5(self):
@@ -133,7 +136,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state7")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=Z0ajuTaHBtM")
+        send_text_message(reply_token, "welcome to state 7")
         self.go_back()
 
     def on_exit_state7(self):
@@ -222,8 +225,18 @@ class TocMachine(GraphMachine):
         print("I'm entering state16")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "new state")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=klOm_bWGog4")
         self.go_back()
 
     def on_exit_state16(self):
         print("Leaving state16")
+
+    def on_enter_state17(self, event):
+        print("I'm entering state17")
+
+        reply_token = event.reply_token
+        send_text_message(reply_token, "good bye my boy")
+        self.go_back()
+
+    def on_exit_state17(self):
+        print("Leaving state17")
