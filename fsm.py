@@ -213,9 +213,8 @@ class TocMachine(GraphMachine):
 
     def on_enter_state15(self, event):
         print("I'm entering state15")
-
+        
         reply_token = event.reply_token
-        send_text_message(reply_token, "fsm.png")
         self.go_back()
 
     def on_exit_state15(self):
