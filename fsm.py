@@ -218,7 +218,7 @@ class TocMachine(GraphMachine):
         message = message_template.show_pic
         message_to_reply = FlexSendMessage("查看fsm結構圖", message)
         line_bot_api = LineBotApi( os.getenv('LINE_CHANNEL_ACCESS_TOKEN') )
-        line_bot_api.reply_message(reply_token, message_to_reply)
+        send_image_message(event.reply_token, 'https://saolife.herokuapp.com/show-fsm')
         self.go_back()
 
     def on_exit_state15(self):
