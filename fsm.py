@@ -123,7 +123,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state5")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.instagram.com/p/CYJyS80hk6S/?utm_source=ig_web_copy_link")
+        send_text_message(reply_token, "https://instagram.com/feichi1124?utm_medium=copy_link")
         self.go_back()
 
     def on_exit_state6(self):
