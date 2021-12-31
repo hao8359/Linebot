@@ -215,10 +215,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state15")
 
         reply_token = event.reply_token
-        message = message_template.show_pic
-        message_to_reply = FlexSendMessage("查看fsm結構圖", message)
-        line_bot_api = LineBotApi( os.getenv('LINE_CHANNEL_ACCESS_TOKEN') )
-        send_image_message(event.reply_token, 'fsm.png')
+        send_text_message(reply_token, "fsm.png")
         self.go_back()
 
     def on_exit_state15(self):
