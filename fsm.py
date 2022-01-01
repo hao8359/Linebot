@@ -107,6 +107,7 @@ class TocMachine(GraphMachine):
 
         reply_token = event.reply_token
         send_image_url(reply_token, "https://cdn2.ettoday.net/images/5257/d5257051.jpg")
+        reply_token = event.reply_token
         send_text_message(reply_token, "統一獅中外野手-又稱[四爺]")
         self.go_back()
 
