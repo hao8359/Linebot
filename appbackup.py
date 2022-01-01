@@ -5,16 +5,16 @@ from flask import Flask, jsonify, request, abort, send_file
 from dotenv import load_dotenv
 from linebot import LineBotApi, WebhookParser
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, MessageTemplateAction
 
 from fsm import TocMachine
-from utils import send_text_message
+from utils import send_text_message, send_button_message
 
 load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "state1", "state2"],
+    states=["user", "state1", "state2", "state3", "state4", "state5", "state6", "state7", "state8", "state9", "state10", "state11", "state12", "state13", "state14", "state15", "state16","state17"],
     transitions=[
         {
             "trigger": "advance",
@@ -28,13 +28,103 @@ machine = TocMachine(
             "dest": "state2",
             "conditions": "is_going_to_state2",
         },
-        {"trigger": "go_back", "source": ["state1", "state2"], "dest": "user"},
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state3",
+            "conditions": "is_going_to_state3",
+        },
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state4",
+            "conditions": "is_going_to_state4",
+        },
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state5",
+            "conditions": "is_going_to_state5",
+        },
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state6",
+            "conditions": "is_going_to_state6",
+        },
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state7",
+            "conditions": "is_going_to_state7",
+        },
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state8",
+            "conditions": "is_going_to_state8",
+        },
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state9",
+            "conditions": "is_going_to_state9",
+        },
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state10",
+            "conditions": "is_going_to_state10",
+        },
+	{
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state11",
+            "conditions": "is_going_to_state11",
+        },
+	    {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state12",
+            "conditions": "is_going_to_state12",
+        },
+	    {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state13",
+            "conditions": "is_going_to_state13",
+        },
+	    {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state14",
+            "conditions": "is_going_to_state14",
+        },
+        {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state15",
+            "conditions": "is_going_to_state15",
+        },
+        {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state16",
+            "conditions": "is_going_to_state16",
+        },
+        {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "state17",
+            "conditions": "is_going_to_state17",
+        },
+        {"trigger": "go_back", "source": ["state1", "state2", "state3", "state4", "state5", "state6", "state7", "state8", "state9", "state10", "state11", "state12", "state13", "state14", "state15", "state16", "state17"], "dest": "user"},
     ],
     initial="user",
     auto_transitions=False,
-    show_conditions=True,
+    show_conditions=True, 
 )
-
+'''machine.get_graph().draw("fsm.png", prog="dot", format="png")'''
 app = Flask(__name__, static_url_path="")
 
 
@@ -104,7 +194,7 @@ def webhook_handler():
         print(f"REQUEST BODY: \n{body}")
         response = machine.advance(event)
         if response == False:
-            send_text_message(event.reply_token, "Not Entering any State")
+            send_text_message(event.reply_token, "請確認輸入")
 
     return "OK"
 

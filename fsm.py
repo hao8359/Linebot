@@ -60,7 +60,7 @@ class TocMachine(GraphMachine):
         return text.lower() == "hot 10"
     def is_going_to_state14(self, event):
         text = event.message.text
-        return text.lower() == "help"
+        return text.lower() == "幫助"
     def is_going_to_state15(self, event):
         text = event.message.text
         return text.lower() == "fsm"
