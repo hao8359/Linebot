@@ -1,6 +1,6 @@
 from transitions.extensions import GraphMachine
 
-from utils import send_text_message, send_image_url
+from utils import send_text_message,send_button_message,send_image_url
 import random
 
 class TocMachine(GraphMachine):
@@ -133,11 +133,28 @@ class TocMachine(GraphMachine):
         print("Leaving state6")
 
     def on_enter_state7(self, event):
-        print("I'm entering state7")
-
-        reply_token = event.reply_token
-        send_text_message(reply_token, "welcome to state 7")
-        self.go_back()
+        title = '您想要訓練哪個部位'
+        text = '輸入你想要訓練的部位名稱'
+        btn = [
+            MessageTemplateAction(
+                label = '胸',
+                text ='胸'
+            ),
+            MessageTemplateAction(
+                label = '背',
+                text = '背'
+            ),
+            MessageTemplateAction(
+                label = '腿',
+                text ='腿'
+            ),
+            MessageTemplateAction(
+                label = 'back',
+                text = 'back'
+            ),
+        ]
+        url = 'https://i.imgur.com/JzBU2kv.jpg'
+        send_button_message(event.reply_token, title, text, btn, url)
 
     def on_exit_state7(self):
         print("Leaving state7")
@@ -196,7 +213,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state13")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=N8NcQzMQN_U")
+        send_text_message(reply_token, "https://youtu.be/W1VnkIFKiFc")
         self.go_back()
 
     def on_exit_state13(self):
@@ -204,7 +221,7 @@ class TocMachine(GraphMachine):
 
     def on_enter_state14(self, event):
         print("I'm entering state14")
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=N8NcQzMQN_U")
+        send_text_message(reply_token, "https://docs.google.com/presentation/d/1HSf3-m6_h9Uv2N_y9mgOG6fOho-bRhl0oInhHdC45ZU/edit#slide=id.g25a54d5e5a4faf37_26")
         reply_token = event.reply_token
         self.go_back()
 
