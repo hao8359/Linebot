@@ -164,10 +164,41 @@ Flask Architecture ❤️ [@Sirius207](https://github.com/Sirius207)
 ### 基本資訊
 名稱：詠嘆調[請勿過度解析程式名稱]
 ![](https://img.onl/cTkacG)
+
 幫我加好友<3>
 可以使用搜尋ID(記得要打"@")或掃QR Code
+
 ![](https://img.onl/pYADsP)
 ### 功能
+1. 輸入[幫助]獲得所有可以用的指令
+![](https://img.onl/VCIOCX)
 
+2. 主場
+![](https://img.onl/nUgN5T)
+
+3. 精彩剪輯
++ 亂數產生不同位統一獅球員的精采好球[總數:10部]
+![](https://img.onl/qUwtfJ)
+
+4. 介紹
+![](https://img.onl/eEJJdM)
+
+5. 球員背號[球員應援曲]
+![](https://img.onl/2h9UjS)
+![](https://img.onl/fUj9zM)
+![](https://img.onl/uBXADH)
+![](https://img.onl/r6f0a)
+![](https://img.onl/qhApEf)
+
+6. fsm && 歌曲推薦
++ fsm 結構圖 && 亂數產生不同的統一獅嗆司推薦歌曲[總數:8部]
+![](https://img.onl/j40V1e)
+![](https://img.onl/vYwxdX)
+
+7. ug
++ 亂數產生不同的啦啦隊女孩照片[總數:15張]
+![](https://img.onl/0hsIl)
+![](https://img.onl/6B9N2)
+![](https://img.onl/9AuzbX)
 > 作者：　郝德志／成功大學資訊系112
 > 最後編輯時間：　2022/1/1
