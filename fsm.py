@@ -85,7 +85,8 @@ class TocMachine(GraphMachine):
         print("I'm entering state2")
         music = ['https://www.youtube.com/watch?v=iFyheD71V6o', 'https://www.youtube.com/watch?v=r8RONH5c9xQ', 'https://www.youtube.com/watch?v=W-HA3H-rAkU', 'https://www.youtube.com/watch?v=5akZH9FMf7w', 'https://www.youtube.com/watch?v=qYCLA-JLdiw', 'https://www.youtube.com/watch?v=odwYUElukyI','https://www.youtube.com/watch?v=_XTOy1bgCJE','https://www.youtube.com/watch?v=_tr8lIOrXuY','https://www.youtube.com/watch?v=Ou0YKPOdM6M','https://www.youtube.com/watch?v=1flIXnij65w']
         reply_token = event.reply_token
-        send_text_message(reply_token, music[random.randint(0,9)])
+        for number in range(10):
+            send_text_message(reply_token, music[number])
         self.go_back()
 
     def on_exit_state2(self):
@@ -106,7 +107,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state4")
 
         reply_token = event.reply_token
-        send_image_url(reply_token, "https://www.youtube.com/watch?v=YvoTfUDc_WY")
+        send_image_url(reply_token, "https://www.youtube.com/watch?v=zdQuBGxpZyc")
         self.go_back()
 
     def on_exit_state4(self):
