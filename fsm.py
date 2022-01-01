@@ -13,7 +13,7 @@ class TocMachine(GraphMachine):
 
     def is_going_to_state2(self, event):
         text = event.message.text
-        return text.lower() == "歌曲推薦"
+        return text.lower() == "精彩剪輯"
 	
     def is_going_to_state3(self, event):
         text = event.message.text
@@ -66,7 +66,7 @@ class TocMachine(GraphMachine):
         return text.lower() == "fsm"
     def is_going_to_state16(self, event):
         text = event.message.text
-        return text.lower() == "6"
+        return text.lower() == "歌曲推薦"
     def is_going_to_state17(self, event):
         text = event.message.text
         return text.lower() == "ug"
@@ -83,10 +83,9 @@ class TocMachine(GraphMachine):
 
     def on_enter_state2(self, event):
         print("I'm entering state2")
-        music = ['https://www.youtube.com/watch?v=iFyheD71V6o', 'https://www.youtube.com/watch?v=r8RONH5c9xQ', 'https://www.youtube.com/watch?v=W-HA3H-rAkU', 'https://www.youtube.com/watch?v=5akZH9FMf7w', 'https://www.youtube.com/watch?v=qYCLA-JLdiw', 'https://www.youtube.com/watch?v=odwYUElukyI','https://www.youtube.com/watch?v=_XTOy1bgCJE','https://www.youtube.com/watch?v=_tr8lIOrXuY','https://www.youtube.com/watch?v=Ou0YKPOdM6M','https://www.youtube.com/watch?v=1flIXnij65w']
+        play = ['https://www.youtube.com/watch?v=iFyheD71V6o', 'https://www.youtube.com/watch?v=r8RONH5c9xQ', 'https://www.youtube.com/watch?v=W-HA3H-rAkU', 'https://www.youtube.com/watch?v=5akZH9FMf7w', 'https://www.youtube.com/watch?v=qYCLA-JLdiw', 'https://www.youtube.com/watch?v=odwYUElukyI','https://www.youtube.com/watch?v=_XTOy1bgCJE','https://www.youtube.com/watch?v=_tr8lIOrXuY','https://www.youtube.com/watch?v=Ou0YKPOdM6M','https://www.youtube.com/watch?v=1flIXnij65w']
         reply_token = event.reply_token
-        for number in range(10):
-            send_text_message(reply_token, music[number])
+        send_text_message(reply_token, play[random.randint(0,9)])
         self.go_back()
 
     def on_exit_state2(self):
@@ -107,7 +106,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state4")
 
         reply_token = event.reply_token
-        send_image_url(reply_token, "https://www.youtube.com/watch?v=zdQuBGxpZyc")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=zdQuBGxpZyc")
         self.go_back()
 
     def on_exit_state4(self):
@@ -207,7 +206,7 @@ class TocMachine(GraphMachine):
     def on_enter_state14(self, event):
         print("I'm entering state14")
         reply_token = event.reply_token
-        send_text_message(reply_token, "請輸入以下可行指令 : \n主場 \n歌曲推薦 \n介紹 \n24 \n32 \n77 \n64 \n68 \n39 \n31 \n5 \n66 \n12 \n幫助 \nfsm \n6 \nug")
+        send_text_message(reply_token, "請輸入以下可行指令 : \n主場 \n精彩剪輯 \n介紹 \n24 \n32 \n77 \n64 \n68 \n39 \n31 \n5 \n66 \n12 \n幫助 \nfsm \n歌曲推薦 \nug")
         
         self.go_back()
 
@@ -226,9 +225,9 @@ class TocMachine(GraphMachine):
 
     def on_enter_state16(self, event):
         print("I'm entering state16")
-
+        music = ['https://www.youtube.com/watch?v=bfHV4tmAhg4','https://www.youtube.com/watch?v=I4Mes83cCYU&list=RDCMUC1tHuRanhZ8i4fEKSNhhNJQ&index=2','https://www.youtube.com/watch?v=gxzBmvQoE6k&list=RDCMUC1tHuRanhZ8i4fEKSNhhNJQ&index=4','https://www.youtube.com/watch?v=AeLWAkbGUhc','https://www.youtube.com/watch?v=UjXLH5byv7U','https://www.youtube.com/watch?v=QzHVkSBylPQ','https://www.youtube.com/watch?v=5UQv4oQttA0','https://www.youtube.com/watch?v=6c2O6qVabhk']
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=Dlicn3o8TN4")
+        send_text_message(reply_token, music[random.randint(0,7)])
         self.go_back()
 
     def on_exit_state16(self):
