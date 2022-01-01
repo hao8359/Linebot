@@ -133,28 +133,12 @@ class TocMachine(GraphMachine):
         print("Leaving state6")
 
     def on_enter_state7(self, event):
-        title = '您想要訓練哪個部位'
-        text = '輸入你想要訓練的部位名稱'
-        btn = [
-            MessageTemplateAction(
-                label = '胸',
-                text ='胸'
-            ),
-            MessageTemplateAction(
-                label = '背',
-                text = '背'
-            ),
-            MessageTemplateAction(
-                label = '腿',
-                text ='腿'
-            ),
-            MessageTemplateAction(
-                label = 'back',
-                text = 'back'
-            ),
-        ]
-        url = 'https://i.imgur.com/JzBU2kv.jpg'
-        send_button_message(event.reply_token, title, text, btn, url)
+        print("I'm entering state5")
+
+        reply_token = event.reply_token
+        send_text_message(reply_token, "https://youtu.be/eZ9poBAcJUU")
+        self.go_back()
+
 
     def on_exit_state7(self):
         print("Leaving state7")
