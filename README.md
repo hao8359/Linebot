@@ -71,7 +71,7 @@ Or You can use [servo](http://serveo.net/) to expose local servers to the intern
 
 
 ## Finite State Machine
-![fsm](./fsm.png)
+![](https://img.onl/XEYT6V)
 
 ## Usage
 The initial state is set to `user`.
@@ -157,3 +157,17 @@ sudo snap install --classic heroku
 Flask Architecture ❤️ [@Sirius207](https://github.com/Sirius207)
 
 [Line line-bot-sdk-python](https://github.com/line/line-bot-sdk-python/tree/master/examples/flask-echo)
+
+## 創立主旨
+希望大家可以多多認識統一獅這個球隊。
+## 介紹
+### 基本資訊
+名稱：詠嘆調[請勿過度解析程式名稱]
+![](https://img.onl/cTkacG)
+幫我加好友<3>
+可以使用搜尋ID(記得要打"@")或掃QR Code
+![](https://img.onl/pYADsP)
+### 功能
+
+> 作者：　郝德志／成功大學資訊系112
+> 最後編輯時間：　2022/1/1
