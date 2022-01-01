@@ -83,9 +83,9 @@ class TocMachine(GraphMachine):
 
     def on_enter_state2(self, event):
         print("I'm entering state2")
-        music = ['https://www.youtube.com/watch?v=_NGQfFCFUn4', 'https://www.youtube.com/watch?v=GJ63esXbY-M&list=RDGJ63esXbY-M&start_radio=1', 'https://www.youtube.com/watch?v=hxQLe6nlUcA', 'https://www.youtube.com/watch?v=MPbUaIZAaeA', 'https://www.youtube.com/watch?v=pE49WK-oNjU', 'https://www.youtube.com/watch?v=L3_4OXQVNgc']
+        music = ['https://www.youtube.com/watch?v=iFyheD71V6o', 'https://www.youtube.com/watch?v=r8RONH5c9xQ', 'https://www.youtube.com/watch?v=W-HA3H-rAkU', 'https://www.youtube.com/watch?v=5akZH9FMf7w', 'https://www.youtube.com/watch?v=qYCLA-JLdiw', 'https://www.youtube.com/watch?v=odwYUElukyI','https://www.youtube.com/watch?v=_XTOy1bgCJE','https://www.youtube.com/watch?v=_tr8lIOrXuY','https://www.youtube.com/watch?v=Ou0YKPOdM6M','https://www.youtube.com/watch?v=1flIXnij65w']
         reply_token = event.reply_token
-        send_text_message(reply_token, music[random.randint(0,5)])
+        send_text_message(reply_token, music[random.randint(0,9)])
         self.go_back()
 
     def on_exit_state2(self):
@@ -106,7 +106,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state4")
 
         reply_token = event.reply_token
-        send_image_url(reply_token, "https://cdn2.ettoday.net/images/5257/d5257051.jpg"+"https://attach.setn.com/newsimages/2021/04/01/3092474-PH.jpg")
+        send_image_url(reply_token, "https://www.youtube.com/watch?v=YvoTfUDc_WY")
         self.go_back()
 
     def on_exit_state4(self):
@@ -116,27 +116,27 @@ class TocMachine(GraphMachine):
         print("I'm entering state5")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://youtu.be/gr2DjP6y1-k")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=dInzAWptnYU")
         self.go_back()
 
     def on_exit_state5(self):
         print("Leaving state5")
 
     def on_enter_state6(self, event):
-        print("I'm entering state5")
+        print("I'm entering state6")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://instagram.com/feichi1124?utm_medium=copy_link")
+        send_text_message(reply_token, "https://youtu.be/aOmGchxlap0")
         self.go_back()
 
     def on_exit_state6(self):
         print("Leaving state6")
 
     def on_enter_state7(self, event):
-        print("I'm entering state5")
+        print("I'm entering state7")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://youtu.be/eZ9poBAcJUU")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=NHTsG0PI7yA")
         self.go_back()
 
 
@@ -147,7 +147,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state8")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=GrAchTdepsU")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=_I3DqlX1LJI")
         self.go_back()
 
     def on_exit_state8(self):
@@ -157,7 +157,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state9")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=brTYTuromPY")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=FpNvId-mqVA")
         self.go_back()
 
     def on_exit_state9(self):
@@ -167,7 +167,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state10")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=AN_R4pR1hck")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=1xlaSudqSZY")
         self.go_back()
 
     def on_exit_state10(self):
@@ -177,7 +177,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state11")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=tcYodQoapMg")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=VTvwE5lSXRc")
         self.go_back()
 
     def on_exit_state11(self):
@@ -187,7 +187,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state12")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=gdZLi9oWNZg")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=VUwiEmBuROA")
         self.go_back()
 
     def on_exit_state12(self):
@@ -197,7 +197,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state13")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://youtu.be/W1VnkIFKiFc")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=Vh_etwp0MOo&t=16s")
         self.go_back()
 
     def on_exit_state13(self):
@@ -206,7 +206,7 @@ class TocMachine(GraphMachine):
     def on_enter_state14(self, event):
         print("I'm entering state14")
         reply_token = event.reply_token
-        send_text_message(reply_token, "請輸入以下可行指令 : 主場 歌曲推薦 介紹 24 32 77 64 68 39 31 5 66 12 幫助 fsm 6 ug")
+        send_text_message(reply_token, "請輸入以下可行指令 : \n主場 \n歌曲推薦 \n介紹 \n24 \n32 \n77 \n64 \n68 \n39 \n31 \n5 \n66 \n12 \n幫助 \nfsm \n6 \nug")
         
         self.go_back()
 
@@ -227,18 +227,19 @@ class TocMachine(GraphMachine):
         print("I'm entering state16")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.instagram.com/p/CVeyJ6Ajr43/?utm_source=ig_web_copy_link")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=Dlicn3o8TN4")
         self.go_back()
 
     def on_exit_state16(self):
         print("Leaving state16")
 
     def on_enter_state17(self, event):
-        print("I'm entering state17")
-
+        print("I'm entering state17 ")
+        members = ['https://www.instagram.com/nini.lin_022/?fbclid=IwAR3p_WoOeeyfs4vDEzOAYPH3WtTUPCEwbVzHIUOSBRi9I2wVzmGrz7Medh4', 'https://www.instagram.com/yukiii_min/?utm_medium=copy_link&fbclid=IwAR0CxLE9-9eAryBKgw2tZZK49w4AH_2euOVKxpImMJmTgxSuR4J620gcb_c', 'https://www.instagram.com/___yovia___/?utm_medium=copy_link&fbclid=IwAR3p_WoOeeyfs4vDEzOAYPH3WtTUPCEwbVzHIUOSBRi9I2wVzmGrz7Medh4', 'https://www.instagram.com/djeminatw/?utm_medium=copy_link&fbclid=IwAR0NvafF2j1lhmdZT_FWQxeFVh3FtlsocGLJ3IWjU_X097q9GmqlGYWSd7M', 'https://www.instagram.com/mia_712/?utm_medium=copy_link&fbclid=IwAR34a_2R37LVV3H7WZYqOiikm5O_EIIPFLL7NrlVdtR_bv3odNWd6my4FJk', 'https://www.instagram.com/han.yang830/?utm_medium=copy_link&fbclid=IwAR3p_WoOeeyfs4vDEzOAYPH3WtTUPCEwbVzHIUOSBRi9I2wVzmGrz7Medh4' ,'https://www.instagram.com/wenziofficial/?utm_medium=copy_link&fbclid=IwAR3RAAWR2YIL5ymRDbBA1RbZl0lJsSVpndFOb1h2APYBMo5QlPW2hMr6EMo' ,'https://www.instagram.com/yimanping/?utm_medium=copy_link&fbclid=IwAR10OSBpgX0fD9MelI2a-DFjNeuPZF0Br8r1EB0ain84wzw8wENXFaYHe4c','https://www.instagram.com/jane.duu.88/?utm_medium=copy_link&fbclid=IwAR2bXJM_6_mjjqIuUbJq-L5Yjjhjok4tA-BxrGHXpWxl37pLerG0aASpiyc','https://www.instagram.com/shihshih_sawmah/?utm_medium=copy_link&fbclid=IwAR3dD3Ay8_8e7EVi-ogBcAzVrH3RQXSvy-9K_ey-01JsoQHCtNkB-4WKEwQ','https://www.instagram.com/__seul777/?utm_medium=copy_link&fbclid=IwAR0kW84gVHk3QVlETwBq7iw-hts5SsKBe8Aw83-2_VFwp0JrBTCt7z6czbQ','https://www.instagram.com/joy_lee.91/?utm_medium=copy_link&fbclid=IwAR1rmoj4SPwi-Suj03yO4vGuL-WiyiFq7w3I0Hca9ZthFl1GJ87eyUtZmGo','https://www.instagram.com/rouyi113/?utm_medium=copy_link&fbclid=IwAR3dD3Ay8_8e7EVi-ogBcAzVrH3RQXSvy-9K_ey-01JsoQHCtNkB-4WKEwQ','https://www.instagram.com/_maggie_chen/?utm_medium=copy_link&fbclid=IwAR2A67PJdReCri3vKlIY1Z7nCjmVcVQc7yYWcuJNnWwfOcE2YafCkoxTTlI','https://www.instagram.com/minnieeee106/?utm_medium=copy_link&fbclid=IwAR2N6tGe54v0w36_LEtPjAx6Gjpf0RkZo20GVzWH7CNEaui0mhSkHKeQsTs','https://www.instagram.com/feichi1124/?utm_medium=copy_link&fbclid=IwAR34a_2R37LVV3H7WZYqOiikm5O_EIIPFLL7NrlVdtR_bv3odNWd6my4FJk']
         reply_token = event.reply_token
-        send_text_message(reply_token, "good bye my boy")
+        send_text_message(reply_token, members[random.randint(0,15)])
         self.go_back()
+
 
     def on_exit_state17(self):
         print("Leaving state17")
