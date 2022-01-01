@@ -9,55 +9,55 @@ class TocMachine(GraphMachine):
 
     def is_going_to_state1(self, event):
         text = event.message.text
-        return text.lower() == "hotlist"
+        return text.lower() == "主場"
 
     def is_going_to_state2(self, event):
         text = event.message.text
-        return text.lower() == "recommendation"
+        return text.lower() == "歌曲推薦"
 	
     def is_going_to_state3(self, event):
         text = event.message.text
-        return text.lower() == "introduction"
+        return text.lower() == "介紹"
    
     def is_going_to_state4(self, event):
         text = event.message.text
-        return text.lower() == "hot 1"
+        return text.lower() == "24"
 
     def is_going_to_state5(self, event):
         text = event.message.text
-        return text.lower() == "hot 2"
+        return text.lower() == "32"
 
     def is_going_to_state6(self, event):
         text = event.message.text
-        return text.lower() == "hot 3"
+        return text.lower() == "77"
 
     def is_going_to_state7(self, event):
         text = event.message.text
-        return text.lower() == "hot 4"
+        return text.lower() == "64"
 
     def is_going_to_state8(self, event):
         text = event.message.text
-        return text.lower() == "hot 5"
+        return text.lower() == "68"
 
     def is_going_to_state9(self, event):
         text = event.message.text
-        return text.lower() == "hot 6"
+        return text.lower() == "39"
 
     def is_going_to_state10(self, event):
         text = event.message.text
-        return text.lower() == "hot 7"
+        return text.lower() == "31"
 
     def is_going_to_state11(self, event):
         text = event.message.text
-        return text.lower() == "hot 8"
+        return text.lower() == "5"
 
     def is_going_to_state12(self, event):
         text = event.message.text
-        return text.lower() == "hot 9"
+        return text.lower() == "66"
 
     def is_going_to_state13(self, event):
         text = event.message.text
-        return text.lower() == "hot 10"
+        return text.lower() == "12"
     def is_going_to_state14(self, event):
         text = event.message.text
         return text.lower() == "幫助"
@@ -66,16 +66,16 @@ class TocMachine(GraphMachine):
         return text.lower() == "fsm"
     def is_going_to_state16(self, event):
         text = event.message.text
-        return text.lower() == "add"
+        return text.lower() == "6"
     def is_going_to_state17(self, event):
         text = event.message.text
-        return text.lower() == "bye bye"
+        return text.lower() == "ug"
 
     def on_enter_state1(self, event):
         print("I'm entering state1")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.billboard.com/charts/hot-100")
+        send_text_message(reply_token, "台南市立棒球場")
         self.go_back()
 
     def on_exit_state1(self):
@@ -95,7 +95,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state3")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "本州排行第一的是Taylor Swifty在2020年12月11日發行的全新單曲 willow"+"\n"+"這支單曲收錄於同日發行的最新專輯《evermore》中。《evermore》作為約半年前發行的《folklore》之姊妹專輯但帶有較強烈的秋冬氣息。而willow 與專輯中的其他首歌都是以indie混一些民謠鄉村的風格呈現，這首歌的名字來自抒情詩「生活是一棵柳樹，它隨風而轉」，歌詞更是「Life was willow when they bent right to your wind」呼應，描述了一個女孩在預期之外愛上了一個男孩，即使兩人有許多的差異，卻相互磨合互補，女孩也願意為了愛情奉獻自己與對方相伴")
+        send_text_message(reply_token, "這是介紹台灣元老級球隊[統一獅]的互動式聊天機器人")
         self.go_back()
 
     def on_exit_state3(self):
@@ -106,7 +106,8 @@ class TocMachine(GraphMachine):
         print("I'm entering state4")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=F3JyzuDIV3I")
+        send_image_url(reply_token, "https://cdn2.ettoday.net/images/5257/d5257051.jpg")
+        send_text_message(reply_token, "統一獅中外野手-又稱[四爺]")
         self.go_back()
 
     def on_exit_state4(self):
@@ -206,7 +207,7 @@ class TocMachine(GraphMachine):
     def on_enter_state14(self, event):
         print("I'm entering state14")
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://docs.google.com/presentation/d/1HSf3-m6_h9Uv2N_y9mgOG6fOho-bRhl0oInhHdC45ZU/edit#slide=id.g25a54d5e5a4faf37_26")
+        send_text_message(reply_token, "請輸入以下可行指令 : 主場 歌曲推薦 介紹 24 32 77 64 68 39 31 5 66 12 幫助 fsm 6 ug")
         
         self.go_back()
 
