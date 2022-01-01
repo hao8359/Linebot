@@ -1,6 +1,6 @@
 from transitions.extensions import GraphMachine
 
-from utils import send_text_message,send_button_message,send_image_url
+from utils import send_text_message,send_button_message, send_image_url
 import random
 
 class TocMachine(GraphMachine):
@@ -230,7 +230,7 @@ class TocMachine(GraphMachine):
 
     def on_enter_state15(self, event):
         print("I'm entering state15")
-        send_text_message(reply_token, "https://img.onl/XEYT6V")
+        send_image_url(reply_token, "https://img.onl/XEYT6V")
         reply_token = event.reply_token
         self.go_back()
 
