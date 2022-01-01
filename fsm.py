@@ -173,7 +173,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state9")
 
         reply_token = event.reply_token
-        send_text_message(reply_token, "https://www.youtube.com/watch?v=DtVxFi9C0RA")
+        send_text_message(reply_token, "https://www.youtube.com/watch?v=brTYTuromPY")
         self.go_back()
 
     def on_exit_state9(self):
