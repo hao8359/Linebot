@@ -221,8 +221,9 @@ class TocMachine(GraphMachine):
 
     def on_enter_state14(self, event):
         print("I'm entering state14")
-        send_text_message(reply_token, "https://docs.google.com/presentation/d/1HSf3-m6_h9Uv2N_y9mgOG6fOho-bRhl0oInhHdC45ZU/edit#slide=id.g25a54d5e5a4faf37_26")
         reply_token = event.reply_token
+        send_text_message(reply_token, "https://docs.google.com/presentation/d/1HSf3-m6_h9Uv2N_y9mgOG6fOho-bRhl0oInhHdC45ZU/edit#slide=id.g25a54d5e5a4faf37_26")
+        
         self.go_back()
 
     def on_exit_state14(self):
@@ -230,8 +231,9 @@ class TocMachine(GraphMachine):
 
     def on_enter_state15(self, event):
         print("I'm entering state15")
-        send_image_url(reply_token, "https://img.onl/XEYT6V")
         reply_token = event.reply_token
+        send_image_url(reply_token, "https://img.onl/XEYT6V")
+        
         self.go_back()
 
     def on_exit_state15(self):
