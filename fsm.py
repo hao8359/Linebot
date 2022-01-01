@@ -106,9 +106,7 @@ class TocMachine(GraphMachine):
         print("I'm entering state4")
 
         reply_token = event.reply_token
-        send_image_url(reply_token, "https://cdn2.ettoday.net/images/5257/d5257051.jpg")
-        reply_token = event.reply_token
-        send_text_message(reply_token, "統一獅中外野手-又稱[四爺]")
+        send_image_url(reply_token, "https://cdn2.ettoday.net/images/5257/d5257051.jpg"+"https://attach.setn.com/newsimages/2021/04/01/3092474-PH.jpg")
         self.go_back()
 
     def on_exit_state4(self):
