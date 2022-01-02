@@ -216,7 +216,7 @@ class TocMachine(GraphMachine):
     def on_enter_state15(self, event):
         print("I'm entering state15")
         reply_token = event.reply_token
-        send_image_url(reply_token, "https://img.onl/XEYT6V")
+        send_image_url(reply_token, "https://i.imgur.com/NpWbp7B.png")
         
         self.go_back()
 
